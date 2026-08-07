@@ -1032,4 +1032,6 @@ async def purge_command(interaction: discord.Interaction, amount: app_commands.R
         await interaction.followup.send("⚠️ 14일이 지난 메시지는 일괄 삭제할 수 없습니다.", ephemeral=True)
 
 # .env 로직을 지우고 토큰을 직접 입력합니다.
-bot.run(TOKEN)
+import os
+token = os.environ.get("DISCORD_TOKEN")
+bot.run(token)
